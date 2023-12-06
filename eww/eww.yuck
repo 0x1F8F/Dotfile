@@ -1,0 +1,70 @@
+(deflisten window :initial "..." "sh ~/.config/eww/get-active-window.sh")
+
+
+
+(defwindow top-pannel
+  :monitor 0
+  :geometry (geometry :x "0%"
+  :y "0.6%"
+  :width "99.6%"
+  :height "40px"
+  :anchor "top center")
+  :stacking "overlay"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ignore true
+  :exclusive true
+  (box
+    :orientation "h"
+    (left_side)
+    (rigth_side))
+)
+
+
+(defwidget left_side []
+  (box
+    :orientation "h"
+    :halign "start"
+    (label :text "workspace"  )
+    (active_window_name)
+  )
+)
+
+(defwidget rigth_side []
+  (box
+    :orientation "h"
+    :halign "right"
+    (battery)
+  )
+)
+
+(defwidget active_window_name []
+  (box
+    :orientation "h"
+    :halign "center"
+    :hexpand true
+    (label :text "${window}")
+  )
+)
+
+(defwidget options []
+  (lable :text "options")
+)
+
+
+(defwidget battery []
+  (box
+    :orientation "horizontal"
+    :halign "end"
+    (button
+      :onclick "echo ok"
+      (progress
+        :orientation "h"
+        :value  "${EWW_BATTERY['BAT1'].capacity}"
+      )
+    )
+  )
+)
+
+
+
