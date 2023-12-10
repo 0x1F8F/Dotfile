@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+
 require("tokyonight-config") -- colorschme 🌃
 require("lualine-config")
 require("editor-config.lsp-config")

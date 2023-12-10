@@ -37,9 +37,15 @@ cmp.setup({
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
-      { name = 'buffer' },
-    })
-  })
+      { name = 'buffer',
+        options = {
+            get_bufnrs = function()
+                return vim.api.nvim_list_bufs()
+            end
+        }
+    },
+        { name = 'path' }
+    })})
 
   -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
@@ -87,3 +93,39 @@ require("mason-lspconfig").setup_handlers {
         }
     end
 }
+
+-- [mini.pairs] --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- |
+
+require('mini.pairs').setup(
+    {
+  -- In which modes mappings from this `config` should be created
+  modes = { insert = true, command = false, terminal = false },
+
+  -- Global mappings. Each right hand side should be a pair information, a
+  -- table with at least these fields (see more in |MiniPairs.map|):
+  -- - <action> - one of 'open', 'close', 'closeopen'.
+  -- - <pair> - two character string for pair to be used.
+  -- By default pair is not inserted after `\`, quotes are not recognized by
+  -- `<CR>`, `'` does not insert pair after a letter.
+  -- Only parts of tables can be tweaked (others will use these defaults).
+  mappings = {
+    ['('] = { action = 'open', pair = '()', neigh_pattern = '[^\\].' },
+    ['['] = { action = 'open', pair = '[]', neigh_pattern = '[^\\].' },
+    ['{'] = { action = 'open', pair = '{}', neigh_pattern = '[^\\].' },
+
+    [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
+    [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
+    ['}'] = { action = 'close', pair = '{}', neigh_pattern = '[^\\].' },
+
+    ['"'] = { action = 'closeopen', pair = '""', neigh_pattern = '[^\\].', register = { cr = false } },
+    ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^&\\].', register = { cr = false } },
+    ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^\\].', register = { cr = false } },
+
+  },
+}
+)
+
+
+
+

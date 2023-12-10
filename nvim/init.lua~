@@ -21,4 +21,6 @@ require("tokyonight-config") -- colorschme 🌃
 require("lualine-config")
 require("editor-config.lsp-config")
 require("telescope-config")
+require("editor-config.terminal")
 require("editor-config.remap")  -- keymap
+require("editor-config.rust")
