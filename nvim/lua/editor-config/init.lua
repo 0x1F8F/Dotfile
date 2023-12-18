@@ -34,5 +34,5 @@ vim.g.mapleader = " "
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- vim.keymap.set({'n','v'}, '<M-j>', vim.cmd(":m .+1<CR>=="),{ noremap=true,silent=true})
--- vim.keymap.set({'n','v'}, '<M-k>', vim.cmd(":m .-2<CR>=="),{ noremap=true,silent=true})
+vim.keymap.set({'n','v'}, '<M-j>', "<CMD>:m .+1<CR>==",{ noremap=true,silent=true})
+vim.keymap.set({'n','v'}, '<M-k>', "<CMD>:m .-2<CR>==",{ noremap=true,silent=true})
