@@ -22,3 +22,6 @@ require("editor-config.lsp-config")
 require("telescope-config")
 require("editor-config.remap")  -- keymap
 require("editor-config.rust")
+require("editor-config.git")
+require('Comment').setup()
+

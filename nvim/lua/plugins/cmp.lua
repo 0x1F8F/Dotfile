@@ -14,5 +14,10 @@ return {
         -- install jsregexp (optional!).
         build = "make install_jsregexp"
     },
-    { 'echasnovski/mini.pairs', version = '*' }
+    { 'echasnovski/mini.pairs', version = '*' },
+    {
+        'numToStr/Comment.nvim',
+        opts = {  },
+        lazy = false,
+    }
 }

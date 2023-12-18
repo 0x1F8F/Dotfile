@@ -80,20 +80,17 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+-- ins_left {
+--   function()
+--     return '▊'
+--   end,
+--   color = { fg = colors.blue }, -- Sets highlighting of component
+--   padding = { left = 0, right = 1 }, -- We don't need space before this
+-- }
 
-ins_left {
-  -- mode component
-  function()
-    return ''
-  end,
-  color = function()
+
+ins_left { 'mode',
+color = function()
     -- auto change color according to neovims mode
     local mode_color = {
       n = colors.red,
@@ -117,10 +114,11 @@ ins_left {
       ['!'] = colors.red,
       t = colors.red,
     }
-    return { fg = mode_color[vim.fn.mode()] }
+    return { bg = mode_color[vim.fn.mode()] , fg = '#121212'}
   end,
-  padding = { right = 1 },
+  padding = { left = 1, right = 1 },
 }
+
 
 ins_left {
   'filename',
@@ -135,7 +133,17 @@ ins_left {
   cond = conditions.buffer_not_empty,
 }
 
-ins_left { 'location' }
+ins_left { 'filetype' }
+
+ins_left { 
+    'searchcount',
+    icon = '🔎',
+}
+
+ins_left { 
+    'selectioncount',
+    icon = '📎'
+}
 
 ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
@@ -152,16 +160,18 @@ ins_left {
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
+
+ins_left { 'buffer' }
 ins_left {
   function()
     return '%='
   end,
 }
 
-ins_left {
+ins_right {
   -- Lsp server name .
   function()
-    local msg = ' '
+    local msg = 'no_lsp'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -213,14 +223,46 @@ ins_right {
 --   color = { fg = colors.red, gui = 'bold' },
 -- }
 
-
 ins_right {
-  function()
-    return '▊'
+  -- mode component
+  'location',
+  color = function()
+    -- auto change color according to neovims mode
+    local mode_color = {
+      n = colors.red,
+      i = colors.green,
+      v = colors.blue,
+      [''] = colors.blue,
+      V = colors.blue,
+      c = colors.magenta,
+      no = colors.red,
+      s = colors.orange,
+      S = colors.orange,
+      [''] = colors.orange,
+      ic = colors.yellow,
+      R = colors.violet,
+      Rv = colors.violet,
+      cv = colors.red,
+      ce = colors.red,
+      r = colors.cyan,
+      rm = colors.cyan,
+      ['r?'] = colors.cyan,
+      ['!'] = colors.red,
+      t = colors.red,
+    }
+    return { bg = mode_color[vim.fn.mode()] ,fg = colors.bg }
   end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
+  padding = { left = 1 ,right = 1 },
 }
+
+-- ins_right {
+--   function()
+--    return '▊'
+--   end,
+--   color = { fg = colors.blue },
+--   padding = { left = 1 },
+-- }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
+

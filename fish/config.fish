@@ -7,6 +7,8 @@ function fish_greeting
     # greet
 end
 
+alias ls lsd
+alias ip "ip -c"
 alias vi nvim
 alias vim nvim
 alias code " vscodium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --unity-launch"
