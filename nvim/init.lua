@@ -19,6 +19,7 @@ require("lazy").setup("plugins")
 require("tokyonight-config") -- colorschme 🌃
 require("lualine-config")
 require("editor-config.lsp-config")
+require("editor-config.formatter")
 require("telescope-config")
 require("editor-config.terminal")
 require("editor-config.remap")  -- keymap
