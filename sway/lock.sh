@@ -1,1 +1,0 @@
-swaylock --ring-color ffffffaa --font FiraCode-Nerd-Font --indicator-radius 200 --indicator-thickness 20 -i ~/.config/hypr/wallpaper/astro-fish.jpg --inside-color 00000077 --separator-color ffffffff --ring-color 212121 --separator-color 00000000 --line-color ffffff00 --layout-bg-color 00000000 --bs-hl-color ffffff --line-color ffffff -r --indicator-thickness 10 
