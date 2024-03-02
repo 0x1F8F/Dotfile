@@ -35,10 +35,24 @@
     "hyprland/window": {
         "format" : "{}",
         "rewrite": {
-          "(.*) — Mozilla Firefox": "󰈹 $1",
-          "(.*) - drun": " 󰮫 ",
+          "(.*) — Mozilla Firefox": "󰈹  $1",
+          "(.*) - drun": "  $1",
           "(.*) - VSCodium": "  $1",
-        //   "(.*)" : " {}"
+          "git (.*)": "󰊢  $1",
+          "nvim (.*)": "  $1",
+          "vim (.*)": "  $1",
+          "docker (.*)": "󰡨  $1",
+          "sudo pacman (.*)": "󰮯  $1",
+          "pacman (.*)": "󰦝 󰮯  $1",
+          "podman (.*)": "  $1",
+          "sudo (.*)": "󰄭  $1",
+          "wine (.*)": "  $1",
+          "python (.*)": "  $1",
+          "cargo (.*)": "  $1",
+          "(.*) — LibreOffice (.*)": "󰏆 $2 - $1",
+
+          // default 
+          "" : " {}"
         },
         "separate-outputs": true
     },
