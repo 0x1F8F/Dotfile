@@ -14,7 +14,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces","hyprland/window"],
     // "modules-center": ["custom/music"],
-    "modules-right": ["custom/music","network","pulseaudio", "backlight","cpu", "memory","temperature", "battery", "tray", "custom/lock","clock"],
+    "modules-right": ["custom/music","network","wireplumber", "backlight","cpu", "memory","temperature", "battery","tray","clock"],
 
 
 
@@ -51,20 +51,20 @@
           "cargo (.*)": "  $1",
           "(.*) — LibreOffice (.*)": "󰏆 $2 - $1",
 
-          // default 
-          "" : " {}"
+        //   default 
+        //   "" : " {}"
         },
         "separate-outputs": true
     },
 
     "custom/music": {
-        "format": " 󰽴{} ",
+        "format": " 󰽴 {} ",
         "escape": true,
         "interval": 5,
         "tooltip": false,
         "exec": "playerctl metadata --format='{{ title }}'",
         "on-click": "playerctl play-pause",
-        "max-length": 50
+        "max-length": 40
     },
 
     "clock": {
@@ -92,14 +92,14 @@
         "format-icons": ["󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀", "󰂁", "󰂂", "󰁹"],
     },
 
-    "pulseaudio": {
+    "wireplumber": {
         // "scroll-step": 1, // %, can be a float
         "format": " {icon} {volume}%",
         "format-muted": "󰸈",
         "format-icons": {
             "default": ["", "󰖀", "󰕾","󱄠"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "helvum"
     },
 
     // "custom/lock": {

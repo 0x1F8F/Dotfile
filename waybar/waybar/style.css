@@ -101,19 +101,22 @@ window#waybar.empty #window {
 }
 
 /* Music player / Network ----------------------------------- */
-#music,
+#custom-music,
 #network {
     color: @text;
-    margin: 8px 8px;
+    margin: 8px 8px 8px 0px;
     padding: 0px 8px 0px 8px;
     border-radius: 10px;
     font-size: 12px;
     background-color: @mantle;
 }
 
+#custom-music {
+    margin: 8px 8px 8px 8px;
+}
 
 /* Utility -------------------------------------------------- */
-#pulseaudio,
+#wireplumber,
 #backlight,
 #battery,
 #clock,
@@ -129,7 +132,7 @@ window#waybar.empty #window {
     font-size: 12px;
 }
 
-#pulseaudio {
+#wireplumber {
     border-radius: 10px  0px 0px 10px;
 }
 
@@ -139,17 +142,25 @@ window#waybar.empty #window {
 }
 
 #battery.critical:not(.charging) {
-    background-color: @mantle;
     color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
+    animation-name: blink_alert;
+    animation-duration: 0.2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 #temperature.critical {
-    background-color: @red;
+    color: @text;
+    animation-name: blink_alert;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charged {
+    color: @blue;
 }
 
 #battery.charging, #battery.plugged {
