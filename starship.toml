@@ -160,11 +160,12 @@ symbol = " "
 symbol = " "
 
 
+# red = "#ffffff"
 
 [character]
 format = "$symbol "
-success_symbol = "[❯](bold white)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[󱘹 ](bold #2ac3de)"
+error_symbol = "[ ](bold #ff9e64)"
 vimcmd_symbol = "[❮](bold green)"
 vimcmd_visual_symbol = "[❮](bold yellow)"
 vimcmd_replace_symbol = "[❮](bold purple)"
