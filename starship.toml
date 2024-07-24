@@ -164,7 +164,7 @@ symbol = " "
 
 [character]
 format = "$symbol "
-success_symbol = "[󱘹 ](bold #2ac3de)"
+success_symbol = "[  ](bold #2ac3de)"
 error_symbol = "[ ](bold #ff9e64)"
 vimcmd_symbol = "[❮](bold green)"
 vimcmd_visual_symbol = "[❮](bold yellow)"
