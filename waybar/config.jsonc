@@ -7,14 +7,14 @@
     // Choose the order of the modules
     
     "layer": "top", // Waybar at top layer
-    // "height": , // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     "position": "top", // Waybar position (top|bottom|left|right)
-    "width": 1910, // Waybar width
+    "width": 1905, // Waybar width
     "margin-top" : 4,
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces","hyprland/window"],
     // "modules-center": ["custom/music"],
-    "modules-right": ["custom/music","network","wireplumber", "backlight","cpu", "memory","temperature", "battery","tray","clock"],
+    "modules-right": ["custom/music","network","wireplumber", "backlight","cpu", "memory","temperature", "battery", "tray", "custom/lock","bluetooth","clock"],
 
 
 
@@ -23,8 +23,8 @@
          "sort-by-name": true,
          "format": "{icon}",
          "format-icons": {
-             "default": "",
-             "active": "",
+             "default": "󰄯",
+             "active": "󰐾",
              "urgent": "󱈸"
          },
      },
@@ -35,24 +35,10 @@
     "hyprland/window": {
         "format" : "{}",
         "rewrite": {
-          "(.*) — Mozilla Firefox": "󰈹  $1",
-          "(.*) - drun": "  $1",
+          "(.*) — Mozilla Firefox": "󰈹 $1",
+          "(.*) - drun": " 󰮫 ",
           "(.*) - VSCodium": "  $1",
-          "git (.*)": "󰊢  $1",
-          "nvim (.*)": "  $1",
-          "vim (.*)": "  $1",
-          "docker (.*)": "󰡨  $1",
-          "sudo pacman (.*)": "󰮯  $1",
-          "pacman (.*)": "󰦝 󰮯  $1",
-          "podman (.*)": "  $1",
-          "sudo (.*)": "󰄭  $1",
-          "wine (.*)": "  $1",
-          "python (.*)": "  $1",
-          "cargo (.*)": "  $1",
-          "(.*) — LibreOffice (.*)": "󰏆 $2 - $1",
-
-        //   default 
-        //   "" : " {}"
+        //   "(.*)" : " {}"
         },
         "separate-outputs": true
     },
@@ -64,20 +50,22 @@
         "tooltip": false,
         "exec": "playerctl metadata --format='{{ title }}'",
         "on-click": "playerctl play-pause",
-        "max-length": 40
+        "max-length": 50
     },
 
     "clock": {
-        "timezone": "Asia/Kolkata",
+        "timezone": "Asia/Dubai",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " 󰸗 {:%d/%m/%Y} ",
         "format": " 󰥔 {:%H:%M} "
     },
 
     "backlight": {
-        "device": "nvidia0",
+        "device": "nvidia_0",
         "format": " {icon} {percent}%",
-        "format-icons": ["󱩎", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
+        "format-icons": ["󱩎", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
+				"on-scroll-up": "brightnessctl set 1+",
+				"on-scroll-down": "brightnessctl set 1-"
     },
 
     "battery": {
@@ -116,7 +104,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " 󰤨 {essid} ({signalStrength}%) " ,
+        "format-wifi": " 󰤨  {essid} ({signalStrength}%) " ,
         "format-ethernet": " 󰈀 {ipaddr}/{cidr} " ,
         "tooltip-format": " 󰩠 {ifname} via {gwaddr} " ,
         "format-linked": " 󰌷 {ifname} (No IP) " ,
@@ -143,4 +131,27 @@
     "memory": {
         "format": "󰘚 {}%"
     },
+
+		"bluetooth": {
+			"format": "󰂯",
+			"format-disabled":"",
+			"format-off":"󰂲",
+			"format-connected": "󰂱",
+			"format-connected-battery": " 󰥈 {device_battery_percentage}%",
+			// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+			"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+			"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+			"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+		},
+"keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+        "locked": "",
+        "unlocked": ""
+    }
+},
+
 }

@@ -1,12 +1,10 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
 
-
-@define-color base   #303446;
-@define-color mantle #292c3c;
-@define-color crust  #232634;
-
-@define-color text     #c6d0f5;
-@define-color subtext0 #a5adce;
-@define-color subtext1 #b5bfe2;
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
 
 @define-color surface0 #414559;
 @define-color surface1 #51576d;
@@ -32,88 +30,98 @@
 @define-color rosewater #f2d5cf;
 
 * {
-    font-family: FiraCode Nerd Font, sans-serif;
-    font-weight: 600;
+  font-family: FiraCode Nerd Font, sans-serif;
+  font-weight: 600;
 }
 
 @keyframes blink_alert {
-    to {
-        color: @red;
-    }
+  to {
+    color: @red;
+  }
 }
 
 window#waybar {
-    background-color: shade(@mantle, 0.9);
-    border: 2px solid alpha(@crust, 0.3);
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 18px;
-    margin: 4px;
+  background-color: shade(@mantle, 0.9);
+  transition-property: background-color;
+  transition-duration: .5s;
+  border-radius: 12px;
 }
 
 button {
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+	box-shadow: none;
+}
+
+button:hover {
+	box-shadow: none;
+}
+tooltip {
+	color: @text;
+	background-color: @mantle;
 }
 
 /* Workspace -------------------------------------------------- */
 #workspaces {
-    margin: 8px;
-    border-radius: 10px;
-    font-size: 14px;
-    background-color: @base;
+  margin: 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  background-color: @base;
 }
 
 #workspaces button {
-    color: @text;
+  color: @text;
+	border: 0px;
+}
+
+#workspaces button:last-child {
+	padding-right: 8px;
 }
 
 #workspaces button:hover {
-    color: alpha(@yellow , 0.2);
-    background: transparent;
-    border-radius: 10px;
-
+	color: alpha(@yellow , 0.2);
+	background: transparent;
+	border: 0px transparent;
 }
 
 #workspaces button.active:hover {
-    color: alpha(@blue,0.2);
-    background: transparent;
-    border-radius: 10px;
+  color: alpha(@blue,0.2);
+  background: transparent;
 }
 
 #workspaces button.active {
-    color: @teal
+  color: @teal
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+  background-color: @red;
 }
 
 /* Window -------------------------------------------------- */
 #window {
-    color: @text;
+  color: @text;
 }
 
 window#waybar.empty #window {
-    color: transparent;
+  color: transparent;
 }
 
 /* Music player / Network ----------------------------------- */
-#music,
+#custom-music,
 #network {
-    color: @text;
-    margin: 8px 8px;
-    padding: 0px 8px 0px 8px;
-    border-radius: 10px;
-    font-size: 12px;
-    background-color: @base;
+  color: @text;
+  margin: 8px 8px;
+  padding: 0px 8px 0px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: @base;
 }
 
 
 /* Utility -------------------------------------------------- */
-#pulseaudio,
+#wireplumber,
 #backlight,
 #battery,
 #clock,
@@ -121,38 +129,39 @@ window#waybar.empty #window {
 #memory,
 #temperature,
 #tray,
-#lock{
-    color: @text;
-    margin: 8px 0px;
-    padding: 8px 4px;
-    background-color: @base;
-    font-size: 12px;
+#lock,
+#bluetooth{
+  color: @text;
+  margin: 8px 0px;
+  padding: 8px 4px;
+  background-color: @base;
+  font-size: 12px;
 }
 
-#pulseaudio {
-    border-radius: 10px  0px 0px 10px;
+#wireplumber {
+  border-radius: 10px  0px 0px 10px;
 }
 
 #clock {
-    border-radius: 0px  10px 10px 0px;
-    margin-right: 8px;
+  border-radius: 0px  10px 10px 0px;
+  margin-right: 8px;
 }
 
+
 #battery.critical:not(.charging) {
-    background-color: @base;
-    color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: @base;
+  color: @text;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #temperature.critical {
-    background-color: @red;
+  color: @red;
 }
 
 #battery.charging, #battery.plugged {
-    color: @green;
+  color: @green;
 }
-
