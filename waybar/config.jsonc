@@ -14,7 +14,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces","hyprland/window"],
     // "modules-center": ["custom/music"],
-    "modules-right": ["custom/music","network","wireplumber", "backlight","cpu", "memory","temperature", "battery", "tray", "custom/lock","bluetooth","clock"],
+    "modules-right": ["custom/music","network","wireplumber", "backlight","cpu", "memory","temperature", "battery", "custom/lock","bluetooth","tray","clock"],
 
 
 
@@ -35,10 +35,22 @@
     "hyprland/window": {
         "format" : "{}",
         "rewrite": {
-          "(.*) — Mozilla Firefox": "󰈹 $1",
-          "(.*) - drun": " 󰮫 ",
+          "(.*) — Mozilla Firefox": "󰈹  $1",
+          "(.*) - YouTube — Zen Browser": "  $1",
+          "(.*) - Google (.*) — Zen Browser": "$2  $1",
+          "(.*) - Google — Zen Browser": "  $1",
+          "ChatGPT — Zen Browser": "󰚩  $1",
+          "(.*) — Zen Browser": "󰬡  $1",
+          "(.*) — Kdenlive": "  $1",
           "(.*) - VSCodium": "  $1",
-        //   "(.*)" : " {}"
+          "(.*) - Inkscape": "  $1",
+          "(.*) - Shotcut": "  $1",
+          "(.*) - Blender (.*)": "  [$2] : $1",
+					"neovim (.*)": "  $1",
+					"nvim (.*)": "  $1",
+					"vim (.*)": "  $1",
+					"vi (.*)": "  $1",
+					"sudo (.*)" : "󱦚 $1",
         },
         "separate-outputs": true
     },
@@ -54,7 +66,7 @@
     },
 
     "clock": {
-        "timezone": "Asia/Dubai",
+        "timezone": "Asia/Chennai",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " 󰸗 {:%d/%m/%Y} ",
         "format": " 󰥔 {:%H:%M} "
@@ -70,12 +82,12 @@
 
     "battery": {
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 50,
+            "critical": 30
         },
-        "format": " {icon} {capacity}%",
-        "format-charging": " 󰂄 {capacity}%",
-        "format-plugged": " 󰚥 {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
         "format-alt": " {icon} {capacity}%",
         "format-icons": ["󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀", "󰂁", "󰂂", "󰁹"],
     },
@@ -133,16 +145,16 @@
     },
 
 		"bluetooth": {
-			"format": "󰂯",
+			"format": " 󰂯 ",
 			"format-disabled":"",
-			"format-off":"󰂲",
-			"format-connected": "󰂱",
+			"format-off":" 󰂲 ",
+			"format-connected": " 󰂱 ",
 			"format-connected-battery": " 󰥈 {device_battery_percentage}%",
 			// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
 			"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 			"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-			"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+			"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\tBattery: {device_battery_percentage}%"
 		},
 "keyboard-state": {
     "numlock": true,

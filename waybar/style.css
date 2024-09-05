@@ -61,6 +61,7 @@ button:hover {
 tooltip {
 	color: @text;
 	background-color: @mantle;
+	font-size: 12px;
 }
 
 /* Workspace -------------------------------------------------- */
@@ -112,13 +113,21 @@ window#waybar.empty #window {
 #custom-music,
 #network {
   color: @text;
-  margin: 8px 8px;
-  padding: 0px 8px 0px 8px;
+  /*margin: 8px 4px;*/
+  /*padding: 0px 8px 0px 8px;*/
+	padding: 8px 4px;
   border-radius: 10px;
   font-size: 12px;
   background-color: @base;
 }
 
+#network {
+	margin: 8px 8px 8px 0px;
+}
+
+#custom-music {
+	margin: 8px 8px;
+}
 
 /* Utility -------------------------------------------------- */
 #wireplumber,
