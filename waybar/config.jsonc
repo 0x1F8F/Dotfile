@@ -35,12 +35,12 @@
     "hyprland/window": {
         "format" : "{}",
         "rewrite": {
-          "(.*) — Mozilla Firefox": "󰈹  $1",
+          "(.*) — Mozilla Firefox": "󰈹 $1",
           "(.*) - YouTube — Zen Browser": "  $1",
           "(.*) - Google (.*) — Zen Browser": "$2  $1",
           "(.*) - Google — Zen Browser": "  $1",
-          "ChatGPT — Zen Browser": "󰚩  $1",
-          "(.*) — Zen Browser": "󰬡  $1",
+          "ChatGPT — Zen Browser": "󰚩 $1",
+          "(.*) — Zen Browser": "󰬡 $1",
           "(.*) — Kdenlive": "  $1",
           "(.*) - VSCodium": "  $1",
           "(.*) - Inkscape": "  $1",
@@ -51,12 +51,22 @@
 					"vim (.*)": "  $1",
 					"vi (.*)": "  $1",
 					"sudo (.*)" : "󱦚 $1",
+					"git (.*)" : "󰊢 $1",
+					"git pull (.*)" : "󰓂 $1",
+					"git fetch (.*)" : " $1",
+					"git push (.*)" : " $1",
+					"git merge (.*)" : " $1",
+					"git lfs (.*)" : " $1",
+					"gh (.*)" : "  $1",
         },
         "separate-outputs": true
     },
 
     "custom/music": {
         "format": " 󰽴 {} ",
+				"rewrite": {
+					"(.*).(.*)": "$1"
+				}
         "escape": true,
         "interval": 5,
         "tooltip": false,
