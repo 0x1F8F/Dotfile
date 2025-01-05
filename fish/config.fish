@@ -7,14 +7,20 @@ function fish_greeting
     # greet
 end
 
-alias ls lsd
+fish_vi_key_bindings
+
+# eval $(ssh-agent -c) > /dev/null
+# ssh-add /Users/RootCl/.ssh/gh 2> /dev/null
+alias ls "lsd --group-directories-first"
 alias ip "ip -c"
 alias vi nvim
 alias vim nvim
-alias code " vscodium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --unity-launch"
+alias less "less -Q"
+alias man "man -P 'less -Q'"
+alias bat "bat --theme='Catppuccin Mocha' -pn"
+# alias code " vscodium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --unity-launch"
 source (/usr/bin/starship init fish --print-full-init | psub)
+zoxide init fish | source
 
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+# set --export WINEPREFIX "$HOME/.wine setup_vkd3d_proton install"
