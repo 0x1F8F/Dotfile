@@ -34,17 +34,17 @@ url_style dashed
 
 enable_audio_bell no
 
-shell /bin/nu
+# shell /bin/nu
 
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="Inconsolata Nerd Font"
+font_family      family="JetBrainsMono Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
-font_size   11.5
+font_size   11
 font_weight normal
 
 modify_font cell_height 0.7px
