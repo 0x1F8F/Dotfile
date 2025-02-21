@@ -1,0 +1,10 @@
+[2024-07-24 13:02:28.702] [info] Using configuration file /Users/RootCl/.config/waybar/config.jsonc
+[2024-07-24 13:02:28.704] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-07-24 13:02:28.704] [info] Using CSS file /Users/RootCl/.config/waybar/style.css
+[2024-07-24 13:02:28.707] [info] Hyprland IPC starting
+[2024-07-24 13:02:28.708] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-07-24 13:02:28.709] [warning] module hyprland/mode: Unknown module: hyprland/mode
+[2024-07-24 13:02:28.713] [error] media stopped unexpectedly, is it endless?
+[2024-07-24 13:02:28.720] [warning] Timezone: Asis/Kolkata. std::chrono::tzdb: cannot locate zone: Asis/Kolkata
+[2024-07-24 13:02:28.886] [info] Bar configured (width: 1920, height: 35) for output: eDP-1
+Gdk-Message: 13:07:13.648: Error reading events from display: Broken pipe

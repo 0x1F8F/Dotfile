@@ -1,0 +1,175 @@
+configuration{
+    modi: "run,drun,window,combi";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+		application-fallback-icon: "/Users/RootCl/.config/rofi/app.svg";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   DRun ";
+    display-run: "   Run ";
+    display-window: " 󰕰  Window ";
+    display-combi: "   Combi ";
+    sidebar-mode: true;
+}
+
+* {
+    bg-col:  #eff1f5;
+    bg-col-light: #eff1f5;
+    border-col: #eff1f5;
+    selected-col: #eff1f5;
+    blue: #04a5e5;
+    fg-col: #4c4f69;
+    fg-col2: #d20f39;
+    grey: #9ca0b0;
+
+    width: 600;
+    font: "FiraCode Nerd Font 14";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 700px;
+		width: 1024px;
+    border: 6px;
+		padding: 6px;
+		border-radius: 12px;
+    border-color: #1e1e2e;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: #1e1e2e;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 6px;
+    margin: 4px 4px 4px 4px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 2px 2px 2px 2px;
+    text-color: #cdd6f4;
+    background-color: #1e1e2e;
+		border-radius: 4px;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 2;
+    lines: 5;
+    background-color: @bg-col-light;
+}
+
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
+}
+
+element-icon {
+    size: 25px;
+		padding: 0px 0px 0px 5px;
+}
+
+
+element normal.normal{
+	background-color: transparent;
+}
+
+element normal.urgent{
+	background-color: transparent;
+}
+
+element normal.active{
+	background-color: transparent;
+}
+
+
+element alternate.normal {
+	background-color: transparent;
+}
+
+element alternate.urgent {
+	background-color: transparent;
+}
+
+element alternate.active {
+	background-color: transparent;
+}
+
+
+
+element selected.normal {
+	background-color: linear-gradient(0deg, #000000, #ffffff);
+	text-color: @fg-col2;
+	border: 0px 0px 0px 5px;
+	border-color: @fg-col2;
+}
+
+element selected.active {
+	background-color: @selected-col;
+	text-color: @fg-col2;
+}
+
+element selected.urgent {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
+
+
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+}

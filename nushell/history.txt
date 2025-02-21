@@ -1,0 +1,1594 @@
+ll
+source starship init nushell
+source $(starship init nushell)
+startship init nushell
+starship init nushell
+starship init nu
+starship init nu | source
+source starship init nu
+echo $HOME
+echo $env.HOME
+echo ${env.HOME}
+ls
+lsd
+lsd | table
+lsd -la | table
+lsd
+exit
+use --help
+"" | use
+"" > use
+"true" > use
+use < ""
+"true" == use
+"true" != use
+exit
+starship init nu | source
+starship init nu
+starship shell
+starship --help
+exit
+ls | grid --color
+ls 
+ls
+ls --du
+ls --mime-type 
+ls -l
+ls -s
+ls -s | get 1
+ls -s | get 1 -s 
+ls -s | get name.txt
+ls | grid --color --icons
+ls | grid --icons
+ls | grid --color --icons
+ls | grid --color --icons -s " "
+ls | grid --color --icons -s "\\"
+ls | grid --color --icons -s "/"
+ls | grid --color --icons -s "/   "
+ls | grid --color --icons -s "   "
+lsd
+ls | grid --color --icons -s "   "
+lc
+alias lc=ls | grid --color --icons -s "   "
+alias lc = 'ls | grid --color --icons -s "   "'
+def lc{<\n>grid --color --icons -s "   "<\n>}
+def lc [] {<\n>grid --color --icons -s "   "<\n>}
+lc
+def lc [] {<\n>ls | grid --color --icons -s "   "<\n>}
+lc
+nvim ~/.config/nushell/extended.nu
+nvim ~/.config/nushell/config.nu
+exit
+lsd
+ll
+nvim ~/.config/nushell/extended.nu
+ll
+exit
+nvim ~/.config/nushell/extended.nu
+ll
+ll | get mode
+ll | get mode | get name
+ll | get mode,name
+ll | get mode name
+ll | listplugins 
+ll | column name
+ll | column Desktop/
+ll | column 1
+ll | columns 1
+ll | columns 
+ll | columns | first
+du
+du --min-size 
+du --max-depth 
+du --max-depth .
+du --max-depth 2
+du --max-depth 1
+du --max-depth 0
+math
+math 24+32
+port 9999
+port 8080
+nmap -p 9999
+nmap -p 9999 localhost
+nmap -p 80-8080 localhost
+nmap -p 80-17777 localhost
+uname 
+htop
+$env.SSH_AGENT_PID
+ps $env.SSH_AGENT_PID
+if $env.SSH_AGENT_PID==0
+if $env.SSH_AGENT_PID==0 {} else {}
+if [$env.SSH_AGENT_PID==0] {} else {}
+if $env.SSH_AGENT_PID == 0 {} else {}
+if $env.SSH_AGENT_PID == 0 { echo hi }
+if $env.SSH_AGENT_PID == 0 {} else { echo hi }
+nvim ~/.config/fish/config.fish
+eval
+exit
+export
+export --help
+nvim ~/.config/nushell/extended.nu
+exit
+$env.USER
+nvim ~/.config/nushell/extended.nu
+exit
+nvim ~/.config/nushell/extended.nu
+exit
+nvim ~/.config/nushell/extended.nu
+startship init nushell
+startship --help
+startship start
+starship 
+starship init nu
+source $(starship init nu)
+starship init nu >> .config/nushell/starship.nu
+starship init nu | tee .config/nushell/starship.nu
+starship init nu > .config/nushell/starship.nu
+starship init nu | save .config/nushell/starship.nu
+nvim ~/.config/nushell/extended.nu
+exit
+ls
+lc
+ll
+la
+lsd
+cd Repo/
+cd github/
+cd dnsl/
+ll
+lsd
+ls
+la
+nvm ~/.config/nushell/extended.nu
+nvim ~/.config/nushell/extended.nu
+li
+exit
+echo $env.SHELL
+ip -a
+ip a
+nvim ~/.config/nushell/extended.nu
+ip -c
+ip -c a
+exit
+ip a
+less
+ls
+less nohup.out
+less nohup.out -Q
+less -Q nohup.out
+less nohup.out
+nvim ~/.config/nushell/extended.nu
+more
+more --help
+more -d nohup.out
+bat 
+nvim ~/.config/nushell/extended.nu
+shut
+shutdown now
+blendr 
+ls
+lc
+la
+ll
+la
+lc
+lv
+ld
+dl
+do {} [false]
+nvim ~/.config/nushell/extended.nu
+li
+bat import_daz_scanned_absolute_paths.json
+bat import_daz_scanned_absolute_paths.json --theme --help
+bat import_daz_scanned_absolute_paths.json --help
+bat import_daz_scanned_absolute_paths.json --list-theme
+bat import_daz_scanned_absolute_paths.json --list-themes
+bat cache --build
+bat import_daz_scanned_absolute_paths.json --list-themes
+nvim ~/.config/nushell/extended.nu
+bat import_daz_scanned_absolute_paths.json
+bat import_daz_scanned_absolute_paths.json --list-themes
+:x
+exit
+tmux
+exit
+bat import_daz_scanned_absolute_paths.json --list-themes
+bat import_daz_scanned_absolute_paths.json
+bat import_daz_scanned_absolute_paths.json --theme Catppuchin Mocha
+bat import_daz_scanned_absolute_paths.json --theme Catppuccin Mocha
+bat import_daz_scanned_absolute_paths.json --theme "Catppuccin Mocha"
+bat import_daz_scanned_absolute_paths.json --theme "Catppuccin-Mocha"
+bat cache -h
+bat cache ---build
+bat cache --build
+echo 22
+echo 22 > /dev/null
+echo 22 | /dev/null
+echo 22 | save /dev/null
+echo 22 | to /dev/null
+echo 22 0>| /dev/null
+echo 22 o>| /dev/null
+echo 22 o+e>| /dev/null
+echo 22 o+e>| echo
+echo 22 o+e> echo
+echo 22 o+e>
+echo 22 o+e> /dev/null
+echo 22 o> /dev/null
+nvim 
+nvim ~/.config/nushell/extended.nu
+reboot
+cd Repo/github/dnsl/
+ll
+li
+ping a.bramp.net
+nmap a.bramp.ne
+nmap a.bramp.net
+nmap aaaa.bramp.net
+nmap aaaa.bramp.net -6
+blendr 
+nvim src/main.rs
+cargo test
+cargo test --help
+fish
+cargo test --no-capture
+cargo test -- --no-capture
+cargo test --no-capture
+fish
+cargo test --nocapture
+cargo test -- --nocapture
+cd Repo/
+ll
+li
+cd dnsd/
+ll
+cargo test -- --nocapture
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo test -- --nocapture
+nvim src/main.rs
+cargo test -- --nocapture
+cargo test -- --nocapture
+git statuss
+git status
+git add .
+git comit
+git commit -m "added binary ops" -S
+git push
+nvim src/main.rs
+cargo run
+nivm 
+nvim src/main.rs
+nivm 
+cargo run
+nvim src/main.rs
+cargo run
+nviim
+nvim src/main.rs
+cargo test -- --nocapture
+nvim 
+nvim src/main.rs
+nvim 
+cargo test -- --nocapture
+bluetoothctl power off
+nvim src/main.rs
+git status
+git add src/dns/header.rs
+git status
+git status
+git add .
+git commit -m "added header parser first 32bit" -S
+git push
+nvim src/main.rs
+shutdown now
+blendr 
+exit
+nu
+exit
+cd Repo/github/dnsl/
+nvim src/main.rs
+nvim ~/.config/nvim/lua/config/gitsigns.lua
+cd ~/.config/nvim
+git status
+git add .
+git commit -m "fixed ---" -S
+git push
+cd -
+nvim src/main.rs
+git status
+git commit -m "update ReadHeader" -S
+git commit -am "update ReadHeader" -S
+git push
+shutdown now
+blendr 
+sudo pacman -Ss caps
+sudo pacman -Ss xmomap
+sudo pacman -Ss xmodmap
+sudo pacman -S extra/interception-caps2esc
+nvim /etc/interception/
+sudo nvim /etc/interception/caps2esc.yaml
+sudo systemctl enable --now udevmon
+reboot
+blender 
+blendr
+mv /etc/interception/caps2esc.yaml /etc/interception/udevmon.yaml
+sudo mv /etc/interception/caps2esc.yaml /etc/interception/udevmon.yaml
+sudo systemctl restart --now udevmon
+blendr 
+nvim 
+notify-send " " -h int:value:1 -h string:synchronous:volume
+notify-send " " -h int:value:10 -h string:synchronous:volume
+nvim ~/.config/dunst/dunstrc
+notify-send " " -h int:value:10 -h string:synchronous:volume
+killall dunst
+notify-send " " -h int:value:10 -h string:synchronous:volume
+wpctl 
+wpctl  get-volume
+wpctl  status
+wpctl  get-volume --help
+wpctl  get-volume DEFAULT_SINK
+fish
+wpctl  get-volume @DEFAULT_AUDIO_SINK@
+wl-copy  "wpctl get-volume @DEFAULT_AUDIO_SINK@"
+wl-copy 'notify-send " " -h int:value:10 -h string:synchronous:volume'
+nvim ~/.config/dunst/dunstrc
+nvim ~/.config/hypr/hyprland.conf
+nvim ~/.config/hypr/script/volume_down.sh
+cd ~/.config/hypr/
+ll
+ls
+nvim hyprpaper.conf
+rm *.png *.jpg
+ll
+ls
+bat d
+ls
+bat d
+notify-send "Default volume sink" -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" -h string:synchronous:volume
+wpctl  get-volume @DEFAULT_AUDIO_SINK@
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | ^split 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | strin
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | string
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim "Volume: "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim "V"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim --help 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim --char="Volume"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str trim --help
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | str split
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split --help
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0 | table
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " |\
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | select 0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0,0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0 0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0 | het 0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " " | get 0 | get 0
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  " "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list  "Volume "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list --help
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -r
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -h
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep --help
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(.d)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(.*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(\d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(\\d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(/d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "(d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x ""
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "*d"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -x "*"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep *
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep "*"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep "Vol"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep --help
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w "Volume"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w " "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w "\s"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w "\\s"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w "\\s*"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | grep -w "\\d*"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | awk 
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | awk "(.d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | awk "(\d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | awk "(d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | awk "(\\d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | find -r "(\d)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | find -r "(\\d)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | find -r "(\\d*)"
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list --char
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list --char=" "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split list --char=' '
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row --char=' '
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " "
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | mul
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | calc
+3+3
+math
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | math sum
+int
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | into int
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | into float
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | into float | $in * 10
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | into float | $in * 100
+wpctl  get-volume @DEFAULT_AUDIO_SINK@ | split row " " | get 1 | into float | $in * 100 | into int
+ls
+cp ~/.config/hypr/script/
+cp ~/.config/hypr/script/volume_down.nu ~/.config/hypr/script/volume_raise.nu
+notify-send "Default volume sink" -h int:value:"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" -h string:synchronous:volume
+notify-send --help
+notify-send -t 2
+notify-send -t 2 h
+notify-send -t 200
+notify-send -t 200 2
+notify-send -t 2000 4
+notify-send -t 200 4
+notify-send -t 500 4
+notify-send -h
+notify-send --help
+notify-send -t 500 4 -e
+notify-send  4 -e
+notify-send  43 -e
+notify-send  --icon volume oo
+notify-send  --icon speaker oo
+notify-send  --icon speker oo
+notify-send  --icon phone oo
+notify-send  --icon bluetooth oo
+notify-send  --icon headphone oo
+notify-send  --icon headphones oo
+notify-send  --icon speaker oo
+notify-send  --icon audio oo
+notify-send  --icon display oo
+nvim .
+nvim ~/.config/nvim/lua/ext/ext.lua
+nvim .
+exit
+tmux
+z
+zoxide 
+zoxide init
+zoxide init nu
+zoxide init nushell
+zoxide init nushell | save ~/.config/nushell/zoxide.nu
+nvim ~/.config/nushell/extended.nu
+z
+caraspace
+sudo pacman -S caraspce
+sudo pacman -Ss caraspa
+sudo pacman -Ss cara
+sudo pacman -Ss carap
+nvim ~/.config/nushell/extended.nu
+z ~/.config/nushell/
+ll
+nvim completor.nu
+nvim extended.nu
+nvim completor.nu
+z nu
+cd ~/.config/nushell/
+ll
+nvim completor.nu
+z -
+exit
+rm completor.nu
+nvim config.nu
+cd ~/.config/nushell/
+nvim extended.nu
+(http get https://api.chucknorris.io/jokes/random).value
+ll
+(http get https://api.chucknorris.io/jokes/random).value
+z ~/.config/nvim/
+git log --pretty=%h»¦«%aN»¦«%s»¦«%aD | lines | split column "»¦«" sha1 committer desc merged_at | first 10
+z nushell
+nvim ../nushell/extended.nu
+z nvim
+gitls
+git status
+git commit -am "nushell integration" -S
+git push
+exit
+sudo usermod rcl --shell /bin/fish
+echo $SHELL
+nvim ~/.config/kitty/kitty.conf
+reboot
+echo $env.SHELL
+echo $SHELL
+tmux
+sudo usermod rcl --shell /bin/nu
+reboot
+blendr
+bluetoothctl connect
+bluetoothctl devices list
+bluetoothctl devices 
+bluetoothctl device
+bluetoothctl devices --help
+blendr
+reboot
+blendr
+z Repo/github/dnsl/
+cargo test
+dig localhost:8059
+sudo pacman -Ss dig
+sudo pacman -S dig
+sudo pacman -S bind
+dig @127.0.0.1 -p 8059 example.com
+dig @127.0.0.1 -p 8053 example.com
+cargo run
+dig @127.0.0.1 -p 8053 example.com +tcp
+cargo run
+shutdown now
+blendr
+z dnsl
+git add .
+git commit -am "update tcp handler" -S
+git push
+shutdown now
+kitten 
+kitten themes
+kitten mouse-demo
+kitten themes
+bat Repo/llm/Seris/seris/model.py
+nvim ~/.config/nushell/extended.nu
+bat Repo/llm/Seris/seris/model.py --theme Nord
+btop
+z nvim
+git status
+nvim lua/ext/ext.lua
+nvim lua/config/lsp.lua
+nvim lua/ext/ext.lua
+nvim lua/config/lsp.lua
+nvim init.lua
+sudo pacman -Ss
+sudo pacman -Syu
+sudo pacman -Ss initramfs
+kitten themes
+z nvim
+nvim init.lua
+true
+nvim init.lua
+git status
+useradd --help
+useradd u1 -c "temp user-1" -d /Users/u1 -m --btrfs-subvolume-home 
+sudo useradd u1 -c "temp user-1" -d /Users/u1 -m --btrfs-subvolume-home 
+ls /Users/
+sudo passwd u1
+su u1
+sudo usermod -h
+sudo usermod -G -h
+sudo usermod -G --help
+sudo usermod -G wheel
+sudo usermod u1 -G wheel
+su u1
+z nvim
+shutdown now
+cd dnsd/
+z dnsl
+cargo run
+dig @127.0.0.1 -p 8053 example.com +tcp
+cargo run
+dig @127.0.0.1 -p 8053 example.com +tcp
+cargo run
+dig @127.0.0.1 -p 8053 example.com +tcp
+nvim src/main.rs
+shutdown now
+blendr
+shutdown now
+sudo mount /dev/nvme0n1p7 /mnt
+cd /mnt
+ll
+cd OxygenNotIncluded/
+ll
+./OxygenNotIncluded.exe
+shutdown now
+sudo mount /dev/nvme0n1p7 /mnt
+z /mnt/OxygenNotIncluded/
+nmcli radio wifi off
+bluetoothctl power off
+./OxygenNotIncluded.exe o+e> /dev/null
+reboot
+bluetoothctl power off
+nmcli radio wifi on
+bluetoothctl power on
+blendr
+fish
+blendr
+z Repo/rust/noman/
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+bat src/main.rs
+shutdown now
+sudo pacman -S ipython
+sudo pacman -Syu
+reboot
+blendr
+nmcli dev wifi rescan
+shutdown now
+bluetoothctl power off
+z dnsl
+nvim src/main.rs
+dig @127.0.0.1 -p 8053 example.com +tcp
+dig @127.0.0.1 -p 8053 www.example.com +tcp
+cargo run
+http get localhost:8053
+http get http://localhost:8053
+http get http://localhost:8053/
+http get http://localhost:8053/ --insecure 
+http get http://localhost:8053/ --full 
+http get http://localhost:8053/ --allow-errors 
+http get http://localhost:8053/ --headers  "e"
+http get http://localhost:8053/ --headers  "e:e"
+http get http://localhost:8053/ --headers  "e e"
+http get http://localhost:8053/ --headers e e
+http get http://localhost:8053/ --headers e
+http get http://localhost:8053/ --headers LABEL LL
+http get http://localhost:8053/ --headers LABEL
+http get http://localhost:8053/ --headers [1 2]
+http get http://localhost:8053/ --headers [1..1000]
+http get http://localhost:8053/ --headers [1 2 3 4 5 6 7 8 9 0]
+http get http://localhost:8053/ --headers [1 2 3 4 5 6 7 8 9 0\]
+http get http://localhost:8053/ --headers [1 2 3 4 5 6 7 8 9 0\<\n>besnbuseb subcuesbcusb cbseuciuebcis csibcebciuesbc cisbecibsec cbiseicbesibcbisecbsebiceuibseibciuebuisebcuiesbvbiesbbvuibviubirbvi]
+http get http://localhost:8053/ --headers [1 2 3 4 5 6 7 8 9 0\<\n>besnbuseb subcuesbcusb cbseuciuebcis csibcebciuesbc cisbecibsec cbiseicbesibcbisecbsebiceuibseibciuebuisebcuiesbvbiesbbvuibviubirbvi bdevkayudbvauyexbvauexydbvryurbvbabouuvouveyouydvrbsurvbyufbrvsvy  vnubvbvdjvbjfdbfjbvfjbvfvbsofbvfsbvfhbvbdfjjljvbsfjvbjbljcklbvfbkdvbjfvbjbf]
+http get http://localhost:8053/ --headers [1 2 3 4 5 6 7 8 9 0\<\n>besnbuseb subcuesbcusb cbseuciuebcis csibcebciuesbc cisbecibsec cbiseicbesibcbisecbsebiceuibseibciuebuisebcuiesbvbiesbbvuibviubirbvi bdevkayudbvauyexbvauexydbvryurbvbabouuvouveyouydvrbsurvbyufbrvsvy  vnubvbvdjvbjfdbfjbvfjbvfvbsofbvfsbvfhbvbdfjjljvbsfjvbjbljcklbvfbkdvbjfvbjbf hurcfurgnrguhuvmhfuvfdvgrgcrgxfurgnugvcnrgrnvgmexrgerfhchnfegrfxmgfrgncgrvbgnergfygcngfugncfgrgcnrgfgvregcnrhcnhrghcn rgcnrmeeng75grgrcnirecgnierghnvutrhgucngcurgnuncrnutrhchrtngnurhuntcrhncncutncnhu]
+dig @127.0.0.1 -p 8053 www.example.com +tcp
+nvim ~/.config/nvim/lua/config/lsp.lua
+nvim ~/.config/nvim/lua/config/null-ls.lua
+nvim ~/.config/nvim/init.lua
+nvim ~/.config/nvim/lua/config/lsp.lua
+nvim ~/.config/nvim/lua/config/dpa.lua
+nvim src/main.rs
+nvim ~/.config/nvim/lua/config/dpa.lua
+nvim src/srv/mod.rs
+nvim ~/.config/nvim/lua/config/dpa.lua
+nvim src/srv/mod.rs
+nvim ~/.config/nvim/lua/config/dpa.lua
+nvim src/srv/mod.rs
+nvim src/dns/header.rs
+nvim ~/.config/nvim/init.lua
+nvim src/dns/header.rs
+git add .
+git commit -am "update network reader" -S
+git push
+shutdown now
+bluetoothctl power off
+nmcli radio wifi off
+z dnsl
+cargo test -- --nocapture
+cargo test
+nvim src/dns/header.rs
+shutdown now
+bluetoothctl power off
+cd Documents/ISO/
+ll
+lsblk 
+sudo dd if=./Fedora-Workstation-Live-x86_64-40-1.14.iso of=/dev/sda status=progress bs=16m
+nmtui
+sudo dd if=./Fedora-Workstation-Live-x86_64-40-1.14.iso of=/dev/sda status=progress bs=64
+sudo dd if=./kali-linux-2024.3-installer-netinst-amd64.iso of=/dev/sda status=progress bs=64
+reboot
+blendr
+sudo pacman -Ss libreoffice-fresh
+sudo pacman -S libreoffice-fresh
+shutdown now
+nmcli radio wifi on
+nmcli dev wifi rescan
+reboot
+blendr
+z dnsl
+shutdown now
+blendr
+cd repo
+cd Repo/
+ll
+lc
+cl
+li
+git clone https://github.com/clayrisser/breeze-hacked-cursor-theme
+cd breeze-hacked-cursor-theme/
+ls
+make
+sudo pacman -Ss xcurso
+sudo pacman -Ss xorg-xcursorgen
+sudo pacman -S xorg-xcursorgen
+make
+ls
+ls Breeze_Hacked/
+mv Breeze_Hacked/ ~/.icons/
+cd ~/.icons
+ls
+bat Colloid-cursors/index.theme
+bat Breeze_Hacked//index.theme
+nvim ~/.config/hypr/hyprland.conf
+ll
+mpv ./2024-12-1022:39:58.ogv
+blendr
+nmcli dev wifi rescan
+reboot
+blendr
+z dnsl
+nvim src/dns/header.rs
+nvim ~/.config/nvim/init.lua
+nvim ~/.config/nvim/lua/
+nvim src/dns/header.rs
+nvim ~/.config/nvim/lua/config/lsp.lua
+nvim src/dns/header.rs
+nvim ~/.config/nvim/lua/ext/ext.lua
+nvim ~/.config/nvim/lua/config/lsp.lua
+nvim src/dns/header.rs
+nvim ~/.config/nvim/lua/config/lsp.lua
+z nvim
+nvim .
+z dnsl
+nvim src/dns/header.rs
+rust-gdb run
+rust-gdb tui
+rust-gdb run dnsl
+rust-gdb run ./target/debug/dnsl
+z dnsl
+tree
+tree --help
+ls
+tree src
+cat src/srv/mod.rs
+bat src/main.rs
+dig @127.0.0.1 -p 8053 www.example.com +tcp
+dig @127.0.0.1 -p 8053 www.example.com +tcp --help
+dig @127.0.0.1 -p 8053 www.example.com +tcp -h
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=4
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=10000000000
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1000000000
+time.sleep 3 && dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1000000000
+time 2to3
+time
+sleep
+sleep 3
+sleep 3.0
+sleep --help
+sleep 3sec
+sleep 3sec ; echo "ok"
+sleep 3sec && echo "ok"
+sleep 3sec and echo "ok"
+sleep 3sec ;and echo "ok"
+sleep 3sec | $in and echo "ok"
+sleep 3sec | $in and true; echo "ok"
+sleep 3sec | echo $in.$in
+sleep 3sec | echo $in
+sleep 3sec | echo $in.$dark_theme
+sleep 3sec ; dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1000000000
+sleep 3sec ; dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100
+sleep 3sec ; while [true] { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100 & }
+sleep 3sec ; while [ 1==1 ] { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100 & }
+1==1
+true and true
+sleep 3sec ; while [ true and true ] { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100 & }
+while [true] {<\n>}
+while [true] {}
+while 
+sleep 3sec ; while true { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100 & }
+sleep 3sec ; while true { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=100 }
+sleep 3sec ; while true { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1 }
+sleep 3sec ; while true { dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1; true }
+bask
+z dnsl
+cat src/srv/mod
+cat src/srv/mod.rs
+bash
+wayba
+z dnsl
+cargo test
+cargo run
+ls
+blendr
+cd WatchDogs2/bin/
+ll
+./WatchDogs2.exe o+e> /dev/null
+z dnsl
+ls
+blendr
+ls
+z
+z dnsl
+ll
+nvim src/dns/header.rs
+git status
+git add .
+git commit -am "implemented Display trait for Header" -S
+git push
+nvim src/srv/mod.rs
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1000000000
+cargo run
+nvim src/srv/mod.rs
+dig @127.0.0.1 -p 8053 www.example.com +tcp +tries=1000000000
+cargo run
+git add .
+git status
+git commit -am "Header parsing" -S
+git push
+shutdown now
+sudo pacman -Syu
+sudo pacman -Ss linux-firmware
+sudo pacman -Syu
+echo $SHELL
+echo $env.SHELL
+sudo usermod rcl --shell /bin/fish
+zsh
+sudo pacman -Ss zsh
+sudo pacman -S zsh zsh-autosuggestions zsh-completions zsh-history-substring-search
+ls
+exit
+ls
+nvim src/srv/mod.rs
+btop
+sudo usermod rcl --shell /bin/zsh
+reboot
+echo $env.SHELL
+showconsolefont 
+sudp showconsolefont 
+sudo showconsolefont 
+sudo pacman -S terminus-font
+setfont --help
+sudo nvim /etc/vconsole.conf
+reboot
+sudo systemctl restart systemd-vconsole-setup.service
+nvim /etc/mkinitcpio.conf
+sudo nvim /etc/mkinitcpio.conf
+sudo mkinitcpio  -P
+sudo nvim /etc/mkinitcpio.conf -m nvidia
+sudo mkinitcpio  -P -m nvidia
+sudo mkinitcpio -P -m nvidia
+sudo mkinitcpio -P --help
+nvim /etc/mkinitcpio.conf
+sudo nvim /etc/mkinitcpio.conf
+sudo mkinitcpio -P --help
+sudo mkinitcpio -P 
+df
+cd /boot
+ls
+ls --du 
+rm grub/
+sudo rm grub/
+sudo rm grub/ -rf
+lls
+ls
+tree EFI/
+sudo rm -rf EFI/GRUB/
+sudo rm -rf EFI/BOOT/
+sudo bootctl 
+sudo bootctl install 
+tree EFI/
+cd /boot
+ls
+sudo rm ./loader/ -rf
+sudo bootctl install 
+ls
+sudo rm *.REC
+ls
+sudo rm initramfs-linux-fallback.img initramfs-linux.img
+ls
+sudo nvim /etc/mkinitcpio.conf
+nvim /etc/mkinitcpio.d/linux.preset
+sudp nvim /etc/mkinitcpio.d/linux.preset
+sudo nvim /etc/mkinitcpio.d/linux.preset
+sudo mkinitcpio -P 
+kitten themes
+kitten mouse-demo
+kitten --help
+kitten choose-font
+ls
+nvim ~/.config/kitty/kitty.conf
+echo $env.SHELL
+exit
+reboot
+sudo nvim /etc/kernel/install.conf
+sudo nvim /etc/kernel/install.d/
+cat /proc/cmdline
+sudp mkinitcpio -P
+sudpo mkinitcpio -P
+sudo mkinitcpio -P
+reboot
+sudo nvim /boot/loader/entries/
+sudo nvim /boot/loader/loader.conf
+cat /proc/cmdline
+ls
+z ~/.config/waybar/
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+nvim config.jsonc
+waybar
+killall waybar
+waybar
+nvim config.jsonc
+waybar
+nvim style.css
+blendr
+waybar
+nvim style.css
+waybar
+nvim style.css
+nvim config.jsonc
+nvim ~/.config/hypr/hyprland.conf
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+nvim style.css
+waybar
+nvim config.jsonc
+exir
+exit
+killall elisa
+reboot
+cat /sys/module/nvidia_drm/parameters/fbdev
+sudo cat /sys/module/nvidia_drm/parameters/fbdev
+sudo nvim /etc/systemd/system/vcon-font.service
+sudo systemctl status vcon-font.service
+sudo systemctl enable vcon-font.service
+ls
+nvim config.jsonc
+tmux
+nmcli dev wifi rescan
+shutdown now
+ls
+exit
+z ~/.config/waybar/
+nvim config.jsonc
+killall waybar
+waybar
+nvim style.css
+waybar
+nvim style.css
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+nvim config.jsonc
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim config.jsonc
+nvim style.css
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+nmcli radio wifi off
+waybar
+nvim style.css
+nvim config.jsonc
+nmcli radio wifi on
+waybar
+nvim style.css
+waybar
+nmcli radio wifi off
+nmcli radio wifi on
+nmcli radio wifi off
+waybar
+nvim config.jsonc
+nvim style.css
+nmcli radio wifi on
+nmcli radio wifi off
+nmcli radio wifi on
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+nmcli radio wifi off
+nmcli radio wifi on
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+nvim style.css
+bluetoothctl power off
+bluetoothctl power on
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+waybar
+nvim config.jsonc
+nvim style.css
+nvim config.jsonc
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+blendr
+waybar
+nvim config.jsonc
+bluetoothctl power of
+bluetoothctl power offf
+bluetoothctl power off
+waybar
+nvim style.css
+bluetoothctl power on
+waybar
+nvim config.jsonc
+waybar
+nvim style.css
+waybar
+waybar
+nvim style.css
+waybar
+reboot
+z waybar
+nvim config.jsonc
+../dunst/
+ls
+killall dunst
+notify-send  --icon display oo
+notify-send  --icon display oo hellp
+notify-send  --icon display oo hellpsvdv
+dunst
+notify-send  --icon display oo h
+notify-send  --icon display oo hfecjmfeirfnwviyntcroowsiergncbgenwurbg8gt4rgfiegfi83wgfeihgfoihg3h934hgioehgtirh3i9thdht4yhth4ro0gtehgd,.reohgrthoiegh
+killall dunst
+dunst
+notify-send  --icon display oo hfecjmfeirfnwviyntcroowsiergncbgenwurbg8gt4rgfiegfi83wgfeihgfoihg3h934hgioehgtirh3i9thdht4yhth4ro0gtehgd,.reohgrthoiegh
+notify-send  --icon display oo h
+dunst
+killall dunst
+notify-send  --icon display oo hfecjmfeirfnwviyntcroowsiergncbgenwurbg8gt4rgfiegfi83wgfeihgfoihg3h934hgioehgtirh3i9thdht4yhth4ro0gtehgd,.reohgrthoiegh
+notify-send  --icon display oo h
+notify-send  h
+notify-send  h fdgvgrd
+notify-send  --icon nofification oo h
+notify-send  --icon info oo h
+notify-send  --icon systemd oo h
+notify-send  --icon system oo h
+notify-send  --icon hyprland oo h
+notify-send  --icon gg oo h
+notify-send  --icon icon oo h
+dunst
+notify-send  oo h
+notify-send  -u low oo h
+nvim dunstrc
+notify-send  -u low oo h
+notify-send  oo h
+notify-send  oo h grd
+notify-send  oo hrdgrd
+notify-send  oo hrdgrdrdg
+notify-send  oo hrdgrdrdgdrgdrg
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrg
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdg
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdg
+reboot
+blendr
+z waybar
+nvim style.css
+killall waybar
+waybar
+killall waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim style.css
+waybar
+nvim config.jsonc
+z waybar
+nvim style.css
+waybar
+reboot
+blendr
+nmcli radio wifi off
+cd WatchDogs2/bin/
+./WatchDogs2.exe o+e> /dev/null
+winetricks 
+cd .wine
+cd
+ls
+cd .wine
+ls
+ls --du 
+..
+ls
+rm -rf `.wine setup_vkd3d_proton install/` .wine/
+wine
+winecfg 
+rm -rf `.wine setup_vkd3d_proton install/` .wine/
+ls
+nvim ~/.config/fish/config.fish
+nmcli radio wifi on
+winecfg 
+sudo pacman -Ss wine-mono
+winecfg 
+rm -rf `.wine setup_vkd3d_proton install/` .wine/
+sudo pacman -S wine-mono
+winecfg 
+ll
+cd NMS/
+ll
+./setup.exe
+htop
+cd .config/dunst/
+ls
+killall waybar
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdg
+dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+dunst
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u c
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+nvim dunstrc
+shutdown now
+blendr
+sudo pacman -Ss camera
+sudo pacman -Ss curtail
+sudo pacman -S curtail
+sudo pacman -Ss gphot
+sudo pacman -S extra/gvfs-gphoto2
+sudo pacman -Ss digikam
+sudo pacman -S digikam
+sudo pacman -Ss gthumb
+sudo pacman -S gthumb
+gthumb 
+gphoto2
+sudo pacman -Ss gphoto
+sudo pacman -S gphoto2
+paru -Ss Qwinff
+paru -S Qwinff
+paru -S qwinff
+sudo pacman -Ss gphoto
+sudo pacman -S kamera
+sudo pacman -Syu
+ukify --help
+tmux
+exit
+kitty -e
+kitty -e /bin/zsh
+nvim ~/.config/hypr/hyprland.conf
+exit
+sudo pacman -Syu
+wine
+nvim ~/.config/hypr/hyprland.conf
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+killall dunst
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu
+notify-send  oo hrdgrdrdgdrgdrggdrgrgdrggdrgrgdgdgrgdgienufcuegfugfnuengfeugbfurebcgfuegfbubegfugrgfbierubgfuiercbefuigfu -u critical
+nvim ~/.config/dunst/dunstrc
+nvim ~/.config/waybar/style.css
+winetricks 
+sudo pacman -Ss vkdx
+sudo pacman -Ss vkd3d-compiler 
+sudo pacman -Ss vkd3d
+sudo pacman -S vkd3d
+./WatchDogs2/
+shutdown now
+kubelet 
+sudo kubelet 
+ls
+home-manager switch
+zoxide init zsh | save ~/.config/nushell/zoxide.nu
+zoxide init zsh | save ~/.zsh-zoxide
+nvim .zsh-init-prompt
+mv .zsh-zoxide .zsh-zoxide.zsh
+exit
+sudo nvim /etc/vconsole.conf
+reboot
+sudo nvim /etc/vconsole.conf
+sudo nvim /etc/cmdline.d/
+reboot
+bluetoothctl power off
+exit
+nvim .zshrc
+ssh git@github.com
+exit
+exit
+ls
+exit
+ls
+ssh-agent -c
+echo $env.HOME
+reboot
+cd .config/nushell/
+ls
+ssh git@github.com
+cat .cache/ssh/env.nuon
+cat .cache/ssh/env.nuon | sed ""
+cat .cache/ssh/env.nuon | sed "(\w+)\s/\1 "
+cd .config/nushell/
+nvim extended.nu
+cd .config/nushell/
+ls
+nvim extended.nu
+reboot
+cd .config/nushell/
+nvim extended.nu
+reboot
+cd .config/nushell/
+ssh git@github.com
+echo $env.SHELL
+ssh-add ~/.ssh/gh
+echo $env.SHELL
+ssh git@github.com
+nvim extended.nu
+cat .cache/ssh/env.nuon
+cd
+cat .cache/ssh/env.nuon
+sudo systemctl start docker
+cd ci
+ls
+cd alpine-kubelet/
+ls
+sudo docker run -it minikube
+sudo docker run -it ubuntu
+ls
+sudo pacman -Ss kube
+sudo pacman -S kubernetes-tools kubernetes-node kubernetes-control-plane
+sudo systemctl status kubeadm 
+ext
+etc
+ls /
+etcd
+kubelet 
+sudp kubelet 
+sudo kubelet 
+tmux
+sudo systemctl status kubeadm 
+sudo systemctl status kube-apiserver 
+sudo systemctl status kube-proxy 
+kubeadm reset
+sudo kubeadm reset
+sudo kubeadm
+shutdown now
+sudo pacman -Syu
+reboot
+ssh git@github.com
+ssh-add ~/.ssh/gh
+ls
+lc
+li
+la
+exit
+wezterm 
+wezterm -vv
+wezterm --help
+wezterm start
+wezterm ls-fonts
+htop
+wezterm -n
+bootctl
+man pacnew
+nvim ~/.config/home-manager/home.nix
+home-manager switch
+nvim ~/.config/home-manager/home.nix
+home-manager switch
+ls
+nvim ~/.config/kitty/kitty.conf
+kitten choose-font
+ls
+nvim ~/.config/kitty/kitty.conf
+kitten choose-font
+nvim ~/.config/kitty/kitty.conf
+kitten choose-font
+ls
+nvim ~/.config/kitty/kitty.conf
+ls
+z rust
+ls
+la
+cargo init
+ls
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+exit
+sudo pacman -Ss polkit
+sudo pacman -Qdi mate-polkit
+sudo pacman -Qd mate-polkit
+sudo pacman -Q mate-polkit
+sudo pacman -Qi mate-polkit
+sudo pacman -Qe mate-polkit
+sudo pacman -Qo mate-polkit
+sudo pacman -Ql mate-polkit
+plugin 
+plugin list
+nmcli radio wifi off
+bluetoothctl power off
+z rust
+cd
+z dnsl
+ls
+tmux
+btop
+netstat -o
+netstat -ot
+sudo pacman -Rus coppwr 
+killall Xwayland
+hyprctl activewindow
+kill 12220
+kill 12021
+waybar
+hyprctl activewindow
+waybar
+hyprctl activewindow
+waybar
+sudo pacman -Rus xfburn -n
+nmcli radio wifi off
+nmcli radio wifi on
+nvim ~/.config/hypr/hyprland.conf
+shutdown now
+cat /proc/cmdline
+nvim ~/.config/hypr/hyprland.conf
+Hyprland
+sudo pacman -Ss wireplumber
+sudo pacman -Ss pipewire
+sudo pacman -S extra/qemu-audio-pipewire
+sudo pacman -S extra/qemu-audio-pipewire extra/easyeffects
+sudo pacman -Syu
+ls /boot
+sudo rm -rf /boot/{ initramfs-linux.img , initramfs-linux-fallback.img}
+sudo mkinitcpio -P
+sudo nvim /etc/mkinitcpio.d/linux.preset
+sudo nvim /etc/mkinitcpio.conf
+sudo nvim /etc/mkinitcpio.d/arch.preset
+sudo rm /etc/mkinitcpio.d/linux.preset
+sudo rm -rf /boot/{ initramfs-linux.img , initramfs-linux-fallback.img}
+ls /boot
+sudo rm -rf /boot/{ initramfs-linux.img , initramfs-linux-fallback.img}
+ls /boot
+sudo rm -rf /boot/initramfs-linux.img
+sudo rm -rf /boot/initramfs-linux-fallback.img
+ls /boot
+sudo mkinitcpio -P
+cd /etc
+ls
+ls | grep pacman
+sudo nvim pacman-conf
+sudo nvim ./pacman.d/
+cd
+cd /etc/mkinitcpio.conf.d/
+ls
+..
+cd mkinitcpio.d/
+ls
+sudo touch linux.preset
+ls
+cd
+nvim /usr/share/libalpm/hooks/
+sudo pacman -S dracout
+sudo pacman -S dracut
+sudo pacman -S tpm2-tools
+dracut 
+dracut --help
+sudo pacman -R mkinitcpio
+sudo nvim /etc/dracut.conf
+sudo nvim /etc/dracut.conf.d/
+cd /boot
+cd EFI/
+tree
+tree -l
+tree -la
+lsd -tree
+lsd -la --tree
+blendr
+wpctl  
+wpctl status
+nmcli dev wifi rescan
+bluetoothctl disconnect 33:33:22:34:D0:82
+bluetoothctl connect 33:33:22:34:D0:82
+sudo pacman -Ss easyeffects 
+winetricks 
+blendr
+ls
+nvim ~/.config/kitty/kitty.conf

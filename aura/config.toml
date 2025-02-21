@@ -1,0 +1,29 @@
+[general]
+cpus = 12
+editor = "nvim"
+doas = false
+language = "en-US"
+noconfirm = false
+
+[aur]
+build = "/Users/RootCl/.cache/aura/builds"
+cache = "/Users/RootCl/.cache/aura/cache"
+clones = "/Users/RootCl/.cache/aura/packages"
+hashes = "/Users/RootCl/.cache/aura/hashes"
+chroot = []
+ignores = []
+git = false
+hotedit = false
+shellcheck = false
+diff = false
+delmakedeps = false
+clean = false
+warn_unknowns = true
+nocheck = false
+skipdepcheck = false
+reverse = false
+
+[backups]
+snapshots = "/Users/RootCl/.cache/aura/snapshots"
+automatic = true
+
