@@ -18,7 +18,7 @@ alias ip "ip -c"
 alias vi nvim
 alias vim nvim
 
-alias less "less -Q"
+alias less "less -Q --use-color"
 alias man "man -P 'less -Q'"
 alias bat "bat --theme='Catppuccin Mocha' -pn"
 

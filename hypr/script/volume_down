@@ -1,0 +1,7 @@
+#!/bin/env fish
+#
+
+wpctl set-volume @DEFAULT_AUDIO_SINK@ .04-
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed s/Volume:\ // |read volume; math "$volume*100"
+math "$volume*100" | read volume
+notify-send -t 450 Volume -h int:value:$volume --icon sound
