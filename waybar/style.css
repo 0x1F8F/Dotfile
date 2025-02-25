@@ -82,8 +82,9 @@ tooltip {
 /* System Tray -------------------------------------------------- */
 #tray {
 	border-color: @fg;
+	color: @bg;
 	border: 2px;
-	background-color:@white;
+	background-color:@overlay1;
   border-radius: 10px;
 	margin: 8px 0px 8px 8px;
 	padding: 0px 8px 0px 8px;
