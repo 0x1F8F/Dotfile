@@ -15,7 +15,7 @@ alias ls "lsd --group-directories-first"
 
 alias ip "ip -c"
 
-alias vi nvim
+alias vi "nvim -u ~/.config/nvim/noconfig.lua"
 alias vim nvim
 
 alias less "less -Q --use-color"

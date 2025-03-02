@@ -1,101 +1,126 @@
 configuration{
-    modi: "run,drun,window,combi";
-    icon-theme: "Oranchelo";
-    show-icons: true;
-    terminal: "kitty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-		application-fallback-icon: "/Users/RootCl/.config/rofi/app.svg";
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   DRun ";
-    display-run: "   Run ";
-    display-window: " 󰕰  Window ";
-    display-combi: "   Combi ";
-    sidebar-mode: true;
+  modi: "run,drun,window,combi";
+  icon-theme: "Colloid-Dark";
+  show-icons: true;
+  terminal: "kitty";
+  drun-display-format: "{icon} {name}";
+  location: 0;
+	fallback-application-icon : "~/.config/rofi/app.svg";
+  disable-history: false;
+  hide-scrollbar: true;
+  display-drun: "  DRun";
+  display-run: "  Run";
+  display-window: "󰕰  Windows";
+  display-combi: "  Combi";
+	display-calc: " Calc";
+	diaplay-rofimoji: "󰞅 Emoji";
+	display-ssh: " ssh";
+  sidebar-mode: true;
 }
 
 * {
-    bg-col:  #eff1f5;
-    bg-col-light: #eff1f5;
-    border-col: #eff1f5;
-    selected-col: #eff1f5;
-    blue: #04a5e5;
-    fg-col: #4c4f69;
-    fg-col2: #d20f39;
-    grey: #9ca0b0;
+	crust  : #1f1f1f60;
+	base   : #45454540;
+	text   : #efefefff;
+	border : #313244aa;
+	red    : #ff0000ff;
 
-    width: 600;
-    font: "FiraCode Nerd Font 14";
+  width: 600;
+  font: "FiraCode Nerd Font 11";
 }
 
+
 element-text, element-icon , mode-switcher {
-    background-color: inherit;
-    text-color:       inherit;
+  background-color: inherit;
+  text-color:       inherit;
 }
 
 window {
-    height: 700px;
-		width: 1024px;
-    border: 6px;
-		padding: 6px;
-		border-radius: 12px;
-    border-color: #1e1e2e;
-    background-color: @bg-col;
+  height: 500px;
+	width: 900px;
+  border: 2px;
+	padding: 0px;
+	border-radius: 12px;
+  border-color: @border;
+  background-color: @crust;
 }
 
 mainbox {
-    background-color: @bg-col;
+  background-color: @crust;
+	color : @text;
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: #1e1e2e;
-    border-radius: 8px;
-    padding: 2px;
-}
-
-prompt {
-    background-color: @blue;
-    padding: 6px;
-    text-color: @bg-col;
-    border-radius: 6px;
-    margin: 4px 4px 4px 4px;
+	margin: 4px;
+  children: [ prompt,entry];
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
 }
 
 textbox-prompt-colon {
-    expand: false;
-    str: ":";
+  expand: false;
+  str: ":";
+}
+
+prompt, entry {
+  padding: 4px;
+  margin: 4px;
+  border-radius: 6px;
+}
+
+prompt {
+  background-color: transparent;
+  text-color: @text;
 }
 
 entry {
-    padding: 6px;
-    margin: 2px 2px 2px 2px;
-    text-color: #cdd6f4;
-    background-color: #1e1e2e;
-		border-radius: 4px;
+  text-color: @text;
+  background-color: transparent;
 }
 
+case-indicator {
+    background-color:               @red;
+    text-color:                     @text;
+    spacing:                        0;
+}
+
+
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
-    columns: 2;
-    lines: 5;
-    background-color: @bg-col-light;
+	border: 0px;
+	border-color: transparent;
+  margin: 0px 0px 0px 8px;
+  columns: 2;
+  lines: 5;
+	background-color: transparent;
 }
 
 element {
-    padding: 5px;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
+  padding: 6px;
+	margin : 4px;
+	border-radius: 12px;
+  background-color: @base;
+  text-color: @text;
 }
 
 element-icon {
-    size: 25px;
-		padding: 0px 0px 0px 5px;
+	padding: 4px;
+	size: 25;
+	background-color: transparent;
 }
 
+element-icon selected.normal {
+  size: 25px;
+	padding: 4px;
+	border-radius: 10px;
+	background-color: @base;
+}
+
+element-text {
+  background-color: transparent;
+  text-color:       @text;
+	padding: 8px;
+}
 
 element normal.normal{
 	background-color: transparent;
@@ -109,7 +134,6 @@ element normal.active{
 	background-color: transparent;
 }
 
-
 element alternate.normal {
 	background-color: transparent;
 }
@@ -122,46 +146,42 @@ element alternate.active {
 	background-color: transparent;
 }
 
-
-
 element selected.normal {
-	background-color: linear-gradient(0deg, #000000, #ffffff);
-	text-color: @fg-col2;
-	border: 0px 0px 0px 5px;
-	border-color: @fg-col2;
-}
-
-element selected.active {
-	background-color: @selected-col;
-	text-color: @fg-col2;
+	background-color: @base;
+	padding: 4px;
 }
 
 element selected.urgent {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+	background-color: @base;
+	padding: 4px;
+}
+
+element selected.active {
+	background-color: @base;
+	padding: 4px;
 }
 
 
 
 mode-switcher {
-    spacing: 0;
+  spacing: 0;
 }
 
 button {
     padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
+    background-color: transparent; /* -- */
+    text-color: @text;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @blue;
+  background-color: @base;
+  text-color: @text;
 }
 
 message {
-    background-color: @bg-col-light;
+    background-color: transparent;
     margin: 2px;
     padding: 2px;
     border-radius: 5px;
@@ -170,6 +190,18 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @blue;
-    background-color: @bg-col-light;
+    text-color: @text;
+    background-color: transparent;
+}
+
+
+scrollbar {
+	color : @red;
+	background-color: transparent;
+	handle-color: @base;
+	handle-width: 2px;
+  width:        0px ;
+  border:       0;
+  padding:      0;
+	margin : 0px 0px 0px 6px;
 }
