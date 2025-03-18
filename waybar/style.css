@@ -1,43 +1,13 @@
-@define-color base			#11111b;
-@define-color mantle		#181825;
-@define-color crust			#1e1e2e;
+@define-color base			#282828;
+@define-color mantle		#18181f;
+@define-color crust			#111118;
 
-@define-color text			#cdd6f4;
-@define-color subtext0	#a6adc8;
-@define-color subtext1	#bac2de;
+@define-color orange    #ff6a88;
+@define-color teal      #00aa88;
+@define-color cyan      #11cff8;
 
-@define-color surface0	#313244;
-@define-color surface1	#45475a;
-@define-color surface2	#585b70;
-
-@define-color overlay0	#6c7086;
-@define-color overlay1	#7f849c;
-@define-color overlay2	#9399b2;
-
-@define-color blue      #89b4fa;
-@define-color lavender  #b4befe;
-@define-color sapphire  #74c7ec;
-@define-color sky       #89dceb;
-@define-color teal      #94e2d5;
-@define-color green     #a6e3a1;
-@define-color yellow    #f9e2af;
-@define-color peach     #fab387;
-@define-color maroon    #eba0ac;
-@define-color red       #f38ba8;
-@define-color mauve     #cba6f7;
-@define-color pink      #f5c2e7;
-@define-color flamingo  #f2cdcd;
-@define-color rosewater #f5e0dc;
-
-@define-color white     #dfdddc;
-@define-color black			#2f3143;
-
-@define-color bg				@crust;
-@define-color bgdeep    @mantle;
-@define-color fg				@text;
-@define-color active-fg @yellow;
-
-
+@define-color text      #efefef;
+@define-color text1     #afafaf;
 
 * {
 }
@@ -60,10 +30,10 @@ window#waybar {
 /*}*/
 
 button {
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 	box-shadow: none;
 }
 
@@ -74,17 +44,17 @@ button:hover {
 
 tooltip {
   font-family: FiraCode Nerd Font, sans-serif;
-	color: @surface0;
-	background-color: @rosewater;
+	color: @text;
+	background-color: alpha(@mantle,0.6);
 	font-size: 14px;
 }
 
 /* System Tray -------------------------------------------------- */
 #tray {
-	border-color: @fg;
-	color: @bg;
+	border-color: @mantle;
+	color: @text;
 	border: 2px;
-	background-color:@overlay1;
+	background-color: alpha(@crust,0.6);
   border-radius: 10px;
 	margin: 8px 0px 8px 8px;
 	padding: 0px 8px 0px 8px;
@@ -97,11 +67,11 @@ tooltip {
   margin: 8px;
   border-radius: 10px;
   font-size: 10px;
-  background-color: @bgdeep;
+  background-color: alpha(@crust,0.6);
 }
 
 #workspaces button {
-  color: @fg;
+  color: @text;
 	border: 0px;
 }
 
@@ -113,18 +83,18 @@ tooltip {
 }
 
 #workspaces button:hover {
-	color: alpha(@yellow , 0.2);
+	color: alpha(@cyan , 0.2);
 	background: transparent;
 	border: 0px transparent;
 }
 
 #workspaces button.active:hover {
-  color: alpha(@sapphire,0.2);
+  color: alpha(@cyan,0.2);
   background: transparent;
 }
 
 #workspaces button.active {
-  color: @active-fg
+  color: @cyan
 }
 
 #workspaces button.urgent {
@@ -133,12 +103,12 @@ tooltip {
 
 /* Current Window Name -------------------------------------------------- */
 #window {
-  color: @fg;
+  color: @text;
   border-radius: 10px;
   font-family: Noto Sans, sans-serif;
 	font-weight: 600;
 	font-size: 13px;
-	background-color: rgba(0,0,0,0.7);
+	background-color: @base;
 	border: 1px;
 	padding: 0px 10px 0px 10px;
 	margin: 9px 0px 9px 0px;
@@ -159,7 +129,7 @@ window#waybar.empty #window {
 	padding: 8px 4px;
   border-radius: 10px;
   font-size: 12px;
-  background-color: @bgdeep;
+  background-color: alpha(@crust,0.6);
 }
 
 #network,
@@ -173,8 +143,8 @@ window#waybar.empty #window {
 
 #privacy {
 	padding : 0px 8px 0px 8px;
-	color: @bg;
-	background-color: @peach;
+	color: #000000;
+	background-color: #ffffff;
 	margin: 8px 0px 8px 8px;
 }
 
@@ -195,10 +165,10 @@ window#waybar.empty #window {
 #lock {
   font-family: FiraCode Nerd Font, sans-serif;
   font-weight: 600;
-  color: @fg;
+  color: @text;
   margin: 8px 0px;
   padding: 8px 4px;
-  background-color: @bgdeep;
+  background-color: alpha(@crust,0.6);
   font-size: 12px;
 }
 
@@ -214,8 +184,8 @@ window#waybar.empty #window {
 
 /* < bluetooth / battery / temperature / network > update ---------------------------- */
 #battery.critical:not(.charging) {
-  background-color: @bgdeep;
-  color: @fg;
+  background-color: alpha(@crust,0.6);
+  color: @text;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -232,19 +202,19 @@ window#waybar.empty #window {
 }
 
 #bluetooth.connected {
-	color: @fg;
-	background-color: @bg;
+	color: @text;
+	background-color: alpha(@crust,0.6);
 }
 
 #bluetooth.disabled,
 #bluetooth.off,
 #bluetooth.on {
 	color: @red;
-	background: @bg;
+	background: alpha(@crust,0.6);
 }
 
 #network.disabled,
 #network.disconnected {
 	color: @red;
-	background-color: @bg;
+	background-color: alpha(@crust,0.6);
 }

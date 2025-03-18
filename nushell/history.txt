@@ -1592,3 +1592,55 @@ winetricks
 blendr
 ls
 nvim ~/.config/kitty/kitty.conf
+read
+let data = (open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv)
+for i in data {<\n>echo $i }
+for i in data {}
+let data = ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv
+let data = '~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv'
+open $data
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| echo row }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| echo $row }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| echo $row.ytid }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| echo $row.ytid; break }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| echo $"tt($row.ytid)" }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav -f 48k -o $row.ytid --download-sections "*0-30" $"https://www.youtube.com/watch?v=($row.ytid)" }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav --audio-quality 48k -o $row.ytid --download-sections "*0-30" $"https://www.youtube.com/watch?v=($row.ytid)" }
+ll
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav --audio-quality 48k -o $row.ytid --download-sections "*0-30" $"https://www.youtube.com/watch?v=($row.ytid)" }
+ll
+rm -rf *
+ls
+..
+exit
+rm -rf *
+ls
+exit
+rm -rf *
+exit
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav --audio-quality 48k -o $"id-($row.ytid)" --download-sections "*10-" $"https://www.youtube.com/watch?v=($row.ytid)" }
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 100
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 1
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 0
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select ..2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 0 2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 1
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select 0
+select --help
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select ...3
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select ..3
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | select ... 3
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | range 0..2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | range 0..100 | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav --audio-quality 48k -o $"id-($row.ytid)" --download-sections "*10-" $"https://www.youtube.com/watch?v=($row.ytid)" }
+ls
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | slice 0..2
+open ~/data/audio/yt-dl/MusicCaps/musiccaps-public.csv | slice 0..100 | each { |row| yt-dlp --force-keyframes-at-cuts --no-warnings -x --audio-format wav --audio-quality 48k -o $"id-($row.ytid)" --download-sections "*10-" $"https://www.youtube.com/watch?v=($row.ytid)" }
+ll
+rm -rf *
+ls
+ll
+exit
