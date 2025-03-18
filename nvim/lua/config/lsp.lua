@@ -1,6 +1,13 @@
 require('mason').setup()
 require('mason-lspconfig').setup()
 
+-- require('jdtls').start_or_attach({
+--     cmd = {'/usr/bin/jdtls'},
+--     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+-- })
+--
+
+
 local lspconfig = require 'lspconfig'
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -20,13 +27,20 @@ lspconfig['ts_ls'].setup {
 	single_file_support = false,
 }
 
--- lspconfig.typos_lsp.setup {
--- 	init_options = {
--- 		config = "~/.config/typos-lsp/typos.toml",
--- 		diagnosticSeverity = "Hint"
--- 	}
--- }
+lspconfig.typos_lsp.setup {
+	init_options = {
+		config = "~/.config/typos-lsp/typos.toml",
+		diagnosticSeverity = "Hint"
+	}
+}
 
+lspconfig.jdtls.setup{
+	capabilities = capabilities,
+}
+
+lspconfig.systemd_ls.setup{
+	capabilities = capabilities,
+}
 
 lspconfig.svelte.setup {
 	capabilities = capabilities,
@@ -41,8 +55,8 @@ lspconfig.clangd.setup {
 			}
 		}
 	},
-	cmd = { 'clangd' },
-	filetypes = { "c", "cc", "h" , "hxx" ,"hxx", "cpp", "objc", "objcpp", "cuda", "proto" }
+	cmd = { "clangd", "--compile-commands-dir=." },
+	filetypes = { "c", "cc", "h", "hxx", "hxx", "cpp", "objc", "objcpp", "cuda", "proto" }
 }
 
 lspconfig.tailwindcss.setup {
